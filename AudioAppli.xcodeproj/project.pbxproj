@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B929CAB22E15D2700067780 /* DashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B929CAA22E15D2700067780 /* DashViewController.swift */; };
+		8B929CAD22E15D9900067780 /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B929CAC22E15D9900067780 /* SlideInTransition.swift */; };
+		8B929CAF22E15E6600067780 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B929CAE22E15E6600067780 /* SideMenuViewController.swift */; };
 		9E00596A1D448670002B72D3 /* GhostButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0059691D448670002B72D3 /* GhostButton.swift */; };
 		9E00596C1D448C0F002B72D3 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E00596B1D448C0F002B72D3 /* Authentication.swift */; };
 		9E0059731D4495D7002B72D3 /* Controllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0059721D4495D7002B72D3 /* Controllers.swift */; };
@@ -31,6 +34,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B929CAA22E15D2700067780 /* DashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashViewController.swift; sourceTree = "<group>"; };
+		8B929CAC22E15D9900067780 /* SlideInTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInTransition.swift; sourceTree = "<group>"; };
+		8B929CAE22E15E6600067780 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		9E0059691D448670002B72D3 /* GhostButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GhostButton.swift; sourceTree = "<group>"; };
 		9E00596B1D448C0F002B72D3 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		9E0059721D4495D7002B72D3 /* Controllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controllers.swift; sourceTree = "<group>"; };
@@ -67,6 +73,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B929CA922E15CF700067780 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				8B929CAA22E15D2700067780 /* DashViewController.swift */,
+				8B929CAC22E15D9900067780 /* SlideInTransition.swift */,
+				8B929CAE22E15E6600067780 /* SideMenuViewController.swift */,
+			);
+			name = SideMenu;
+			sourceTree = "<group>";
+		};
 		9E00596D1D448C45002B72D3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +167,7 @@
 			children = (
 				9E0B82781D45C20E006DBF32 /* Songs */,
 				9E0059711D4495C2002B72D3 /* Helpers */,
+				8B929CA922E15CF700067780 /* SideMenu */,
 				9E00596D1D448C45002B72D3 /* Models */,
 				9E00596E1D448C52002B72D3 /* Views */,
 				9E00596F1D448C59002B72D3 /* Controllers */,
@@ -193,8 +210,8 @@
 				TargetAttributes = {
 					9E13DF471D44751000F99096 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = WW2DT39PV6;
 						LastSwiftMigration = 0820;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -203,6 +220,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -239,6 +257,8 @@
 			files = (
 				9E13DF4E1D44751000F99096 /* LoginViewController.swift in Sources */,
 				9E6A90551D465FF000DDCD1F /* MusicPlayerCenter.swift in Sources */,
+				8B929CAD22E15D9900067780 /* SlideInTransition.swift in Sources */,
+				8B929CAB22E15D2700067780 /* DashViewController.swift in Sources */,
 				9E6A90511D462A0100DDCD1F /* CircleStrokeButton.swift in Sources */,
 				9E0059731D4495D7002B72D3 /* Controllers.swift in Sources */,
 				9E00596A1D448670002B72D3 /* GhostButton.swift in Sources */,
@@ -251,6 +271,7 @@
 				9E13DF4C1D44751000F99096 /* AppDelegate.swift in Sources */,
 				9E00596C1D448C0F002B72D3 /* Authentication.swift in Sources */,
 				9EE02E241D474368005F3C5D /* StringExtension.swift in Sources */,
+				8B929CAF22E15E6600067780 /* SideMenuViewController.swift in Sources */,
 				9E0059751D44A053002B72D3 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,11 +385,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AudioAppli/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hungdo.AudioAppli;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -376,11 +400,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AudioAppli/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hungdo.AudioAppli;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

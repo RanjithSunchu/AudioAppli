@@ -52,12 +52,12 @@ class PlayerViewController: UIViewController {
     
     @IBAction func playOrPauseButtonTapped(_ button: CircleStrokeButton) {
         if button.currentTitle == "Play" {
-            button.setTitle("Pause", for: UIControlState())
+            button.setTitle("Pause", for: UIControl.State())
             button.image = UIImage(named: "pause")
             play()
             startRotatingCoverImage()
         } else if button.currentTitle == "Pause" {
-            button.setTitle("Play", for: UIControlState())
+            button.setTitle("Play", for: UIControl.State())
             button.image = UIImage(named: "play")
             pause()
             stopRotatingCoverImage()
@@ -128,7 +128,7 @@ class PlayerViewController: UIViewController {
         volumeSlider.maximumValue = 1.0
         volumeSlider.value = player.volume
         
-        playButton.setTitle("Pause", for: UIControlState())
+        playButton.setTitle("Pause", for: UIControl.State())
         playButton.image = UIImage(named: "pause")
         
         if player.playing {
